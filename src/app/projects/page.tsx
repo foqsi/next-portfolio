@@ -1,37 +1,55 @@
 'use client'
 
+import { FadeInDown } from '@/components/animations'
+import FadeSequence from '@/components/animations/FadeSequence'
 import ProjectCard from '@/components/ProjectCard'
-import { motion } from 'framer-motion'
+import { FaFolderOpen } from 'react-icons/fa'
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql } from 'react-icons/si'
 
 export default function ProjectsPage() {
+  const techIcons = [
+    { icon: <SiNextdotjs size={20} />, name: 'Next.js' },
+    { icon: <SiTypescript size={20} />, name: 'TypeScript' },
+    { icon: <SiTailwindcss size={20} />, name: 'Tailwind CSS' },
+    { icon: <SiPostgresql size={20} />, name: 'PostgreSQL' },
+  ]
+
   const projects = [
     {
-      title: 'Simpler Appointments',
-      description: 'A customizable booking widget users can embed into their own sites.',
-      link: 'https://github.com/realedavis/simpler-appointments',
+      title: 'El Reno Nail Spa',
+      description: 'CRUD app allowing owner to manage services, gallery, and appointments.',
+      link: '/projects/salon',
+      icons: techIcons,
     },
     {
-      title: 'Nail Salon Dashboard',
-      description: 'Admin dashboard to manage services, gallery uploads, and booking.',
-      link: 'https://github.com/realedavis/nail-salon-dashboard',
+      title: 'Simpler Appointments - WIP',
+      description: 'A customizable booking widget users can embed into their own sites.',
+      link: 'https://github.com/realedavis/simpler-appointments',
+      icons: techIcons,
+    },
+    {
+      title: 'Portfolio',
+      description: 'This portfolio site built with Next.js, Tailwind CSS, and TypeScript.',
+      link: 'https://www.github.com/foqsi/next-portfolio',
+      icons: techIcons,
     },
   ]
 
   return (
-    <section className="min-h-screen flex flex-col items-center px-4 py-12 text-center">
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl font-bold mb-10"
-      >
-        Projects
-      </motion.h2>
+    <section className="min-h-screen flex flex-col items-center px-4 pt-12 text-center">
+      <FadeInDown>
+        <h2 className="text-4xl font-bold mb-10 flex items-center gap-2 text-gradient bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
+          <FaFolderOpen className="text-accent text-3xl" />
+          Projects
+        </h2>
+      </FadeInDown>
 
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
-        ))}
+        <FadeSequence
+          steps={projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        />
       </div>
     </section>
   )

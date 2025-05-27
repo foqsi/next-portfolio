@@ -16,7 +16,7 @@ module.exports = {
         background: 'var(--color-background)',
         foreground: 'var(--color-foreground)',
         muted: 'var(--color-muted)',
-        accent: 'var(--color-accent)',
+        accent: '#3b82f6',
       },
     },
   },

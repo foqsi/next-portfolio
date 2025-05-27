@@ -1,16 +1,19 @@
 'use client'
 
 import { useTheme } from '@/components/ThemeProvider'
+import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa'
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()
+  const isDark = theme === 'dark'
 
   return (
     <button
       onClick={toggleTheme}
-      className="absolute top-4 right-4 px-3 py-1 text-sm border rounded bg-gray-100 dark:bg-gray-800 dark:text-white dark:border-gray-600"
+      className="absolute top-4 right-4 p-2 rounded text-xl text-yellow-400 hover:text-yellow-300 transition"
+      title={isDark ? 'Turn on the light' : 'Turn off the light'}
     >
-      {theme === 'dark' ? 'Light' : 'Dark'} Mode
+      {isDark ? <FaLightbulb /> : <FaRegLightbulb />}
     </button>
   )
 }

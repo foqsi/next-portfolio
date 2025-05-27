@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
-import { FaHome, FaUserAlt, FaCode, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaHome, FaCode, FaEnvelope, FaGithub, FaLinkedin, FaFile } from 'react-icons/fa'
 
 export default function Navigation() {
   const [showMenu, setShowMenu] = useState(false)
@@ -20,14 +20,14 @@ export default function Navigation() {
 
   return (
     <nav className="bg-background border-t border-muted shadow-md px-6 py-3 flex justify-around text-muted relative z-50">
-      <Link href="/" className="flex flex-col items-center text-xs text-gray-500">
+      <Link href="/home" className="flex flex-col items-center text-xs text-gray-500">
         <FaHome className="text-xl" />
         Home
       </Link>
 
-      <Link href="/about" className="flex flex-col items-center text-xs text-gray-500">
-        <FaUserAlt className="text-xl" />
-        About
+      <Link href="/resume" className="flex flex-col items-center text-xs text-gray-500">
+        <FaFile className="text-xl" />
+        Resume
       </Link>
 
       <Link href="/projects" className="flex flex-col items-center text-xs text-gray-500">

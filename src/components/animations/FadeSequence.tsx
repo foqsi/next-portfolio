@@ -1,4 +1,3 @@
-// components/animations/FadeSequence.tsx
 'use client'
 
 import { motion } from 'framer-motion'
@@ -7,7 +6,7 @@ import { ReactNode } from 'react'
 export default function FadeSequence({
   steps,
   baseDelay = 0,
-  stepDelay = 1.5,
+  stepDelay = 0.1,
 }: {
   steps: ReactNode[]
   baseDelay?: number
@@ -19,14 +18,12 @@ export default function FadeSequence({
         <motion.div
           key={i}
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: [0, 1, 1, 0], y: [20, 0, 0, -20] }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
             delay: baseDelay + i * stepDelay,
-            duration: stepDelay,
-            times: [0, 0.2, 0.8, 1],
-            ease: 'easeInOut',
+            duration: 0.4,
+            ease: 'easeOut',
           }}
-          className="absolute"
         >
           {step}
         </motion.div>

@@ -1,12 +1,13 @@
+// layout.tsx
+
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import ThemeToggle from '@/components/ThemeToggle'
-import MobileNav from '@/components/MobileNav'
-import Navigation from '@/components/Navigation'
-
-const inter = Inter({ subsets: ['latin'] })
+import MobileNav from '@/components/navigation/mobile/MobileNav'
+import NavigationWrapper from '@/components/navigation/NavigationWrapper'
+import { HeroPinProvider } from '@/context/HeroPinContext'
+import Hero from '@/components/Hero'
 
 export const metadata: Metadata = {
   title: 'Edward Davis',
@@ -16,19 +17,19 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-background text-foreground transition-colors overflow-hidden`}>
+      <body className="font-raleway bg-background text-foreground transition-colors overflow-x-hidden overflow-y-auto">
+        <HeroPinProvider>
+          <ThemeProvider>
+            <Hero />
+            <NavigationWrapper />
 
-        <ThemeProvider>
-          <div className="hidden md:block">
-            <Navigation />
-          </div>
-          <ThemeToggle />
+            <main className="pt-[6rem] px-4">{children}</main>
 
-          {children}
-          <div className="fixed bottom-0 left-0 w-full z-50 md:hidden">
-            <MobileNav />
-          </div>
-        </ThemeProvider>
+            <div className="fixed bottom-0 left-0 w-full z-50 md:hidden">
+              <MobileNav />
+            </div>
+          </ThemeProvider>
+        </HeroPinProvider>
       </body>
     </html>
   )
