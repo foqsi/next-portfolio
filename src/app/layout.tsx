@@ -3,7 +3,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/components/ThemeProvider'
-import ThemeToggle from '@/components/ThemeToggle'
 import MobileNav from '@/components/navigation/mobile/MobileNav'
 import NavigationWrapper from '@/components/navigation/NavigationWrapper'
 import { HeroPinProvider } from '@/context/HeroPinContext'
