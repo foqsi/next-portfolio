@@ -32,12 +32,22 @@ export default function GetInTouchPage() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(formData);
-    // TODO: send formData to your server or email handler
-    alert('Thank you! I will review your request and get back to you soon.');
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const res = await fetch('/api/send-contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    })
+
+    if (res.ok) {
+      alert('Thank you! I will review your request and get back to you soon.')
+    } else {
+      alert('Something went wrong. Please try again later.')
+    }
+  }
+
 
   return (
     <main className="bg-gray-50 dark:bg-background max-w-3xl mx-auto px-4 py-12">
@@ -57,8 +67,22 @@ export default function GetInTouchPage() {
           <li>Base price is a <strong>one-time purchase of $200 USD</strong>.</li>
           <li>You will also need to pay an <strong>annual fee for domain renewal</strong>. This can range from $10 to thousands of dollars per year.</li>
           <li>I can work with you to <strong>find a cheaper domain</strong> if needed.</li>
+          <li>You can request a higher level of detail or fancier features for an <strong>extra cost</strong> depending on request.</li>
         </ul>
+
+        {/* Example link */}
+        <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          Want to see an example?{' '}
+          <a
+            href="/projects/salon"
+            className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+          >
+            View an example
+          </a>
+          .
+        </p>
       </section>
+
 
       <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow p-6 space-y-6">
         {/* Basic Info */}
