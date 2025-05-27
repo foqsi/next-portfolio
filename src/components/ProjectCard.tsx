@@ -1,20 +1,17 @@
 'use client'
 
-import Link from 'next/link'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 
 type Props = {
   title: string
   description: string
-  link: string
+  live?: string // optional
+  github: string
   icons: { icon: React.ReactNode; name: string }[]
 }
 
-export default function ProjectCard({ title, description, link, icons }: Props) {
-  // Determine if the link is external
-  const isExternal = link.startsWith('http')
-
+export default function ProjectCard({ title, description, live, github, icons }: Props) {
   return (
     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow p-6 w-full max-w-md text-left transition-transform transform hover:scale-105 hover:shadow-lg">
       <h3 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">{title}</h3>
@@ -34,15 +31,27 @@ export default function ProjectCard({ title, description, link, icons }: Props) 
         ))}
       </div>
 
-      {/* Link with conditional behavior */}
-      <Link
-        href={link}
-        target={isExternal ? '_blank' : '_self'}
-        rel={isExternal ? 'noopener noreferrer' : undefined}
-        className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:underline"
-      >
-        View Project
-      </Link>
+      {/* Links */}
+      <div className="flex gap-4 mt-4 text-sm font-medium">
+        {live && (
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            Live Site
+          </a>
+        )}
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          GitHub
+        </a>
+      </div>
     </div>
   )
 }
