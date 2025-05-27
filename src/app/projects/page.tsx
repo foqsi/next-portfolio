@@ -24,7 +24,7 @@ export default function ProjectsPage() {
     {
       title: 'Simpler Appointments - WIP',
       description: 'A customizable booking widget users can embed into their own sites.',
-      link: 'https://github.com/realedavis/simpler-appointments',
+      link: 'https://github.com/foqsi/simpler',
       icons: techIcons,
     },
     {
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
   ]
 
   return (
-    <section className="min-h-screen flex flex-col items-center px-4 pt-12 text-center">
+    <section className="bg-gray-50 dark:bg-background min-h-screen flex flex-col items-center px-4 pt-12 pb-24 text-center">
       <FadeInDown>
         <h2 className="text-4xl font-bold mb-10 flex items-center gap-2 text-gradient bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
           <FaFolderOpen className="text-accent text-3xl" />

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function SalonSiteFeatures() {
   return (
-    <main className="max-w-5xl mx-auto px-4 py-12">
+    <main className="bg-gray-50 dark:bg-background max-w-5xl mx-auto px-4 pt-12 pb-24">
       <header className="text-center mb-12">
         <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">El Reno Nail Spa</h1>
       </header>

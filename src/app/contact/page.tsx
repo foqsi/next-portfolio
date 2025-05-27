@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin, FaCommentDots } from 'react-icons/fa'
 
 export default function ContactPage() {
   return (
-    <section className="min-h-screen flex flex-col items-center px-4 py-12 text-center">
+    <section className="bg-gray-50 dark:bg-background min-h-screen flex flex-col items-center px-4 py-12 text-center">
       <FadeInDown>
         <h2 className="text-4xl font-bold mb-10 flex items-center gap-2  text-gradient bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
           <FaCommentDots className="text-accent text-3xl" />

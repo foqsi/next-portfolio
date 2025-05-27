@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Hero />
             <NavigationWrapper />
 
-            <main className="pt-[6rem] px-4">{children}</main>
+            <main className="pt-[6rem]">{children}</main>
 
             <div className="fixed bottom-0 left-0 w-full z-50 md:hidden">
               <MobileNav />

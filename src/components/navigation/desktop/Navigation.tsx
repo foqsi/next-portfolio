@@ -16,7 +16,7 @@ export default function Navigation() {
   const pathname = usePathname()
 
   return (
-    <div className="fixed top-28 left-0 w-full bg-white dark:bg-background z-[99] flex justify-center border-b border-border px-4">
+    <div className="fixed top-28 left-0 w-full bg-gray-100 dark:bg-background z-[99] flex justify-center border-b border-border mx-auto">
       <nav className="flex gap-4">
         {tabs.map(({ href, label, icon, external }) => {
           const isActive = pathname === href
