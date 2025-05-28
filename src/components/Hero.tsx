@@ -41,8 +41,6 @@ export default function Hero() {
 
   return (
     <header
-      onClick={skipIntro}
-      onTouchStart={skipIntro}
       className={`fixed top-0 left-0 w-full z-50 bg-background text-foreground transition-all duration-700 ${pinned ? 'h-28 py-2' : 'min-h-screen flex justify-center items-center'
         }`}
     >
@@ -67,6 +65,13 @@ export default function Hero() {
 
         {shouldAnimate && !pinned && (
           <>
+            <div
+              onClick={skipIntro}
+              onTouchStart={skipIntro}
+              className="absolute inset-0 z-50 cursor-pointer flex items-center justify-center text-muted-foreground/70 text-xs uppercase tracking-wide pb-6"
+            >
+              Tap or Click to Skip
+            </div>
             <FadeIn delay={2.1}>
               <h2 className="text-2xl md:text-3xl font-extrabold text-muted mt-4">
                 Full-Stack Software Developer
@@ -74,7 +79,7 @@ export default function Hero() {
             </FadeIn>
             <FadeIn delay={2.4}>
               <p className="mt-6 max-w-xl mx-auto text-sm sm:text-base text-muted/80 leading-relaxed">
-                I like to write code, and I try to make it modular and clean.
+                I like to write modular and responsive code.
               </p>
             </FadeIn>
           </>
