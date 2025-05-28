@@ -6,13 +6,13 @@ import 'tippy.js/dist/tippy.css'
 type Props = {
   title: string
   description: string
-  view?: string
+  about?: string
   live?: string
   github: string
   icons: { icon: React.ReactNode; name: string }[]
 }
 
-export default function ProjectCard({ title, description, view, live, github, icons }: Props) {
+export default function ProjectCard({ title, description, about, live, github, icons }: Props) {
   return (
     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow p-6 w-full max-w-md text-left transition-transform transform hover:scale-105 hover:shadow-lg">
       <h3 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">{title}</h3>
@@ -34,14 +34,14 @@ export default function ProjectCard({ title, description, view, live, github, ic
 
       {/* Links */}
       <div className="flex gap-4 mt-4 text-sm font-medium">
-        {view && (
+        {about && (
           <a
-            href={view}
+            href={about}
             target="_self"
             rel="noopener noreferrer"
             className="text-blue-600 dark:text-blue-400 hover:underline"
           >
-            View
+            Read More
           </a>
         )}
         {live && (

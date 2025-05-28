@@ -18,9 +18,9 @@ export default function ProjectsPage() {
     {
       title: 'El Reno Nail Spa',
       description: 'CRUD app allowing owner to manage services, gallery, and appointments.',
-      view: '/projects/salon',
+      about: '/projects/salon',
       live: 'https://elrenonailspa.com',
-      github: 'https://github.com/realedavis/salon-site',
+      github: 'https://github.com/foqsi/salon-site',
       icons: techIcons,
     },
     {
