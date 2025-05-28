@@ -24,16 +24,15 @@ export default function ResumePage() {
           <h3 className="text-lg font-semibold text-foreground mb-2">Technical Skills</h3>
           <ul className="list-disc list-inside space-y-1">
             <li>Frontend: React, Next.js, Tailwind CSS, Vue</li>
-            <li>Backend: Node.js, Supabase, SQL</li>
-            <li>Other: Git, Linux, REST APIs</li>
+            <li>Backend: Node.js, PostgreSQL, SQL</li>
+            <li>Other: Supabase, Git, Linux, REST APIs</li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-lg font-semibold text-foreground mb-2">Projects</h3>
           <ul className="list-disc list-inside space-y-1">
-            <li><strong>El Reno Nail Spa</strong> – A service/gallery site with an admin dashboard</li>
-            <li><strong>Simpler Appointments</strong> – A booking widget businesses can embed on their site</li>
+            <li><a href='/projects' className='text-blue-500 hover:underline'>View Projects</a></li>
           </ul>
         </div>
       </div>

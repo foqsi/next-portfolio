@@ -4,7 +4,7 @@ import { FadeInDown } from '@/components/animations'
 import FadeSequence from '@/components/animations/FadeSequence'
 import ProjectCard from '@/components/ProjectCard'
 import { FaFolderOpen } from 'react-icons/fa'
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql, SiReact } from 'react-icons/si'
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql, SiPython } from 'react-icons/si'
 
 export default function ProjectsPage() {
   const techIcons = [
@@ -18,6 +18,7 @@ export default function ProjectsPage() {
     {
       title: 'El Reno Nail Spa',
       description: 'CRUD app allowing owner to manage services, gallery, and appointments.',
+      view: '/projects/salon',
       live: 'https://elrenonailspa.com',
       github: 'https://github.com/realedavis/salon-site',
       icons: techIcons,
@@ -30,20 +31,18 @@ export default function ProjectsPage() {
       icons: techIcons,
     },
     {
+      title: 'StreamLights',
+      description: 'A simple program that shows what has been enabled or disabled at a glance.',
+      github: 'https://github.com/foqsi/streamlight',
+      icons: [
+        { icon: <SiPython size={20} />, name: 'Python' },
+      ],
+    },
+    {
       title: 'Portfolio',
       description: 'This portfolio site built with Next.js, Tailwind CSS, and TypeScript.',
       github: 'https://github.com/foqsi/next-portfolio',
       icons: techIcons,
-    },
-    {
-      title: 'Old Portfolio',
-      description: 'My first project using React and Tailwind. I followed a tutorial for this portfolio.',
-      live: 'https://v1.realedavis.com',
-      github: 'https://github.com/foqsi/first-portfolio',
-      icons: [
-        { icon: <SiReact size={20} />, name: 'React' },
-        { icon: <SiTailwindcss size={20} />, name: 'Tailwind CSS' },
-      ],
     },
   ]
 
