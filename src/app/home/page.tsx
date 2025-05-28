@@ -13,7 +13,7 @@ export default function HomePage() {
       {/* Card */}
       <div className="max-w-3xl w-full bg-white dark:bg-gray-800 rounded-lg shadow p-6 text-left space-y-4">
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-          Name is <span className="text-foreground font-semibold">Edward</span>. I&apos;m a <span className="text-accent">full-stack software developer</span> and current bachelor’s student in technology. I’ve been writing code since 2022. I try to write clean, modular code.
+          Name is <span className="text-foreground font-semibold">Edward</span>. I&apos;m a <span className="text-accent">full-stack software developer</span> and current bachelor’s student in technology. I’ve been writing code since 2022. I write modular and resposive code.
         </p>
 
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
