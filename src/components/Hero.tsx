@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { useHeroPin } from '@/context/HeroPinContext'
 import { FadeIn } from '@/components/animations'
 import ThemeToggle from '@/components/ThemeToggle'
@@ -33,8 +33,16 @@ export default function Hero() {
     }
   }, [hasMounted, setPinned])
 
+  const skipIntro = useCallback(() => {
+    setShouldAnimate(false)
+    setPinned(true)
+    sessionStorage.setItem('hasSeenHero', 'true')
+  }, [setPinned])
+
   return (
     <header
+      onClick={skipIntro}
+      onTouchStart={skipIntro}
       className={`fixed top-0 left-0 w-full z-50 bg-background text-foreground transition-all duration-700 ${pinned ? 'h-28 py-2' : 'min-h-screen flex justify-center items-center'
         }`}
     >
@@ -49,14 +57,13 @@ export default function Hero() {
       >
         <h1
           onClick={() => {
-            sessionStorage.removeItem('hasSeenHero');
-            window.location.reload();
+            sessionStorage.removeItem('hasSeenHero')
+            window.location.reload()
           }}
           className="text-4xl sm:text-5xl font-extrabold text-accent cursor-pointer hover:underline transition"
         >
           Edward Davis
         </h1>
-
 
         {shouldAnimate && !pinned && (
           <>
