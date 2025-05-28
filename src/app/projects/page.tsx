@@ -4,7 +4,7 @@ import { FadeInDown } from '@/components/animations'
 import FadeSequence from '@/components/animations/FadeSequence'
 import ProjectCard from '@/components/ProjectCard'
 import { FaFolderOpen } from 'react-icons/fa'
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql, SiPython } from 'react-icons/si'
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql, SiPython, SiReact } from 'react-icons/si'
 
 export default function ProjectsPage() {
   const techIcons = [
@@ -43,6 +43,16 @@ export default function ProjectsPage() {
       description: 'This portfolio site built with Next.js, Tailwind CSS, and TypeScript.',
       github: 'https://github.com/foqsi/next-portfolio',
       icons: techIcons,
+    },
+    {
+      title: 'Portfolio',
+      description: 'My first React project.',
+      live: 'https://v1.realedavis.com',
+      github: 'https://github.com/foqsi/react-portfolio',
+      icons: [
+        { icon: <SiReact size={20} />, name: 'React' },
+        { icon: <SiTailwindcss size={20} />, name: 'Tailwind CSS' },
+      ],
     },
   ]
 
