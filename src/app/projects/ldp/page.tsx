@@ -2,7 +2,7 @@
 
 export default function NewHireAutomation() {
   return (
-    <main className="bg-gray-50 dark:bg-backgroundalt max-w-5xl mx-auto px-4 pb-16 mb-6 rounded-xl">
+    <main className="bg-gray-50 dark:bg-backgroundalt max-w-5xl mx-auto px-4 pb-16 mb-6 pt-12 rounded-xl">
       <header className="text-center mb-12">
         <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">New Hire Automation</h1>
         <p className="text-gray-700 dark:text-gray-300 max-w-xl mx-auto">

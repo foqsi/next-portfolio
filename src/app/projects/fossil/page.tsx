@@ -34,6 +34,9 @@ export default function DiscordBotFeatures() {
           <li>Commands for admins and moderators</li>
           <li>Pairing system to link Steam and Discord accounts</li>
           <li>Admin RCON control for server management</li>
+          <li>Dinosaur storing and re-storing</li>
+          <li>Automatically control dinosaur population by locking those with high player count</li>
+          <li>Patreon can unlock dinosaurs</li>
         </ul>
       </section>
 
