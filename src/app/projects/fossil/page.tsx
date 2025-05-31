@@ -1,7 +1,5 @@
 // /app/discord-bot-features/page.tsx
 
-import Link from 'next/link';
-
 export default function DiscordBotFeatures() {
   return (
     <main className="bg-gray-50 dark:bg-backgroundalt max-w-5xl mx-auto px-4 pt-12 pb-16 mb-6 rounded-xl">

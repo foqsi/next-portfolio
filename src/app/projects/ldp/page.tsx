@@ -1,7 +1,5 @@
 // /app/newhire-automation/page.tsx
 
-import Link from 'next/link';
-
 export default function NewHireAutomation() {
   return (
     <main className="bg-gray-50 dark:bg-backgroundalt max-w-5xl mx-auto px-4 pb-16 mb-6 rounded-xl">
