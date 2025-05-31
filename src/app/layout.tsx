@@ -35,7 +35,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-raleway bg-background text-foreground transition-colors overflow-x-hidden overflow-y-auto">
         <HeroPinProvider>
           <ThemeProvider>
-            {/* Render as a client component */}
             <LayoutContent>{children}</LayoutContent>
           </ThemeProvider>
         </HeroPinProvider>
