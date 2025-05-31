@@ -3,6 +3,7 @@
 import { FadeInDown } from '@/components/animations'
 import FadeSequence from '@/components/animations/FadeSequence'
 import ProjectCard from '@/components/ProjectCard'
+import { i } from 'framer-motion/client'
 import { FaFolderOpen } from 'react-icons/fa'
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql, SiPython, SiReact } from 'react-icons/si'
 
@@ -22,6 +23,24 @@ export default function ProjectsPage() {
       live: 'https://elrenonailspa.com',
       github: 'https://github.com/foqsi/salon-site',
       icons: techIcons,
+    },
+    {
+      title: 'Fossil Logs',
+      description: 'A Discord bot that monitored The Isle Evrima game server logs to create an interactive player experience.',
+      about: '/projects/fossil',
+      github: 'https://github.com/foqsi/DiscordBot-TheIsle',
+      icons: [
+        { icon: <SiPython size={20} />, name: 'Python' },
+        { icon: <SiPostgresql size={20} />, name: 'PostgreSQL' },
+      ],
+    },
+    {
+      title: 'New Hire Automation',
+      description: 'A Python-based Selenium script that automated repetitive admin tasks for new hire onboarding.',
+      about: '/projects/ldp',
+      icons: [
+        { icon: <SiPython size={20} />, name: 'Python' },
+      ],
     },
     {
       title: 'Simpler Appointments - WIP',
@@ -45,7 +64,7 @@ export default function ProjectsPage() {
       icons: techIcons,
     },
     {
-      title: 'Portfolio',
+      title: 'Portfolio v1',
       description: 'My first React project.',
       live: 'https://v1.realedavis.com',
       github: 'https://github.com/foqsi/react-portfolio',

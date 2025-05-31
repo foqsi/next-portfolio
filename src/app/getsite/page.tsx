@@ -50,7 +50,7 @@ export default function GetInTouchPage() {
 
 
   return (
-    <main className="bg-gray-50 dark:bg-background max-w-3xl mx-auto px-4 py-12">
+    <main className="bg-gray-50 dark:bg-backgroundalt max-w-3xl mx-auto px-4 py-12">
       <header className="text-center mb-8">
         <h1 className="text-4xl font-bold mb-2">Request Your Website</h1>
         <p className="text-gray-700 dark:text-gray-300 max-w-xl mx-auto">
@@ -84,7 +84,7 @@ export default function GetInTouchPage() {
       </section>
 
 
-      <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow p-6 space-y-6">
+      <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow p-6 space-y-6 mb-8">
         {/* Basic Info */}
         <div>
           <label className="block font-medium mb-1" htmlFor="name">

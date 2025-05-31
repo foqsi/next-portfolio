@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         background: 'var(--color-background)',
+        backgroundalt: 'var(--color-background-alt)',
         foreground: 'var(--color-foreground)',
         muted: 'var(--color-muted)',
         accent: '#3b82f6',

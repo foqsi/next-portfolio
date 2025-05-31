@@ -5,13 +5,13 @@ import Link from 'next/link';
 
 export default function SalonSiteFeatures() {
   return (
-    <main className="bg-gray-50 dark:bg-background max-w-5xl mx-auto px-4 pt-12 pb-24">
+    <main className="bg-gray-50 dark:bg-backgroundalt max-w-5xl mx-auto px-4 pb-16 mb-6 rounded-xl">
       <header className="text-center mb-12">
         <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">El Reno Nail Spa</h1>
       </header>
 
       {/* Core Features */}
-      <section className="mb-16 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+      <section className="mb-6 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Core Features</h2>
         <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
           <li>Easy online booking system with automated confirmations</li>
@@ -26,7 +26,7 @@ export default function SalonSiteFeatures() {
       </section>
 
       {/* CRUD Explanation */}
-      <section className="mb-16 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+      <section className="mb-6 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4">What is CRUD?</h2>
         <p className="mb-4 text-gray-700 dark:text-gray-300">
           CRUD stands for <strong>Create, Read, Update, Delete</strong>. It’s a core concept in web
@@ -49,7 +49,7 @@ export default function SalonSiteFeatures() {
       </section>
 
       {/* Screenshots */}
-      <section className="mb-16 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+      <section className="mb-6 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-center">Gallery & Admin Features</h2>
         <div className="grid gap-6 sm:grid-cols-2">
           <Image
@@ -126,7 +126,7 @@ export default function SalonSiteFeatures() {
       </section>
 
       {/* Call to Action */}
-      <section className="text-center mt-16 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+      <section className="text-center mt-10 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Would you like your own?</h2>
         <p className="mb-6 text-gray-700 dark:text-gray-300 max-w-xl mx-auto">
           Want a simple CRUD website for your salon or small business? Check out the example below:
@@ -141,14 +141,6 @@ export default function SalonSiteFeatures() {
             className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 font-medium hover:underline"
           >
             elrenonailspa.com
-          </a>
-          <a
-            href="https://github.com/foqsi/react-salon"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 font-medium hover:underline"
-          >
-            GitHub Repo
           </a>
         </div>
 

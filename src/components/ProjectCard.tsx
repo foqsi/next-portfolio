@@ -8,7 +8,7 @@ type Props = {
   description: string
   about?: string
   live?: string
-  github: string
+  github?: string // Make GitHub optional
   icons: { icon: React.ReactNode; name: string }[]
 }
 
@@ -54,14 +54,16 @@ export default function ProjectCard({ title, description, about, live, github, i
             Live
           </a>
         )}
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          GitHub
-        </a>
+        {github && ( // Only render GitHub link if provided
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            GitHub
+          </a>
+        )}
       </div>
     </div>
   )

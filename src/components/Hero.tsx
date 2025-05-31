@@ -70,7 +70,6 @@ export default function Hero() {
               onTouchStart={skipIntro}
               className="absolute inset-0 z-50 cursor-pointer flex items-center justify-center text-muted-foreground/70 text-xs uppercase tracking-wide pb-6"
             >
-              Tap or Click to Skip
             </div>
             <FadeIn delay={2.1}>
               <h2 className="text-2xl md:text-3xl font-extrabold text-muted mt-4">
@@ -79,7 +78,7 @@ export default function Hero() {
             </FadeIn>
             <FadeIn delay={2.4}>
               <p className="mt-6 max-w-xl mx-auto text-sm sm:text-base text-muted/80 leading-relaxed">
-                I like to write modular and responsive code.
+                I create responsive web apps in a modular way.
               </p>
             </FadeIn>
           </>
