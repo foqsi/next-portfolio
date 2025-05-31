@@ -3,7 +3,6 @@
 import { FadeInDown } from '@/components/animations'
 import FadeSequence from '@/components/animations/FadeSequence'
 import ProjectCard from '@/components/ProjectCard'
-import { i } from 'framer-motion/client'
 import { FaFolderOpen } from 'react-icons/fa'
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql, SiPython, SiReact } from 'react-icons/si'
 
