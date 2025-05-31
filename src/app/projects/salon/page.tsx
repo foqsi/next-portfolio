@@ -1,29 +1,13 @@
 // /app/salon-site-features/page.tsx
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function SalonSiteFeatures() {
   return (
-    <main className="bg-gray-50 dark:bg-backgroundalt max-w-5xl mx-auto px-4 pb-16 mb-6 rounded-xl">
+    <main className="bg-gray-50 dark:bg-backgroundalt max-w-5xl mx-auto px-4 pt-12 pb-16 mb-6 rounded-xl">
       <header className="text-center mb-12">
         <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">El Reno Nail Spa</h1>
       </header>
-
-      {/* Core Features */}
-      <section className="mb-6 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Core Features</h2>
-        <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
-          <li>Easy online booking system with automated confirmations</li>
-          <li>Responsive (good on mobile devices, too)</li>
-          <li>Customizable service menus</li>
-          <li>Embedded Google Maps & contact form</li>
-          <li>SEO-optimized for better search rankings</li>
-          <li>Mobile-friendly & fast-loading</li>
-          <li>Automatically apply logo or watermark</li>
-          <li>CRUD admin panels for managing content</li>
-        </ul>
-      </section>
 
       {/* CRUD Explanation */}
       <section className="mb-6 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
@@ -124,34 +108,6 @@ export default function SalonSiteFeatures() {
           </div>
         </div>
       </section>
-
-      {/* Call to Action */}
-      <section className="text-center mt-10 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Would you like your own?</h2>
-        <p className="mb-6 text-gray-700 dark:text-gray-300 max-w-xl mx-auto">
-          Want a simple CRUD website for your salon or small business? Check out the example below:
-        </p>
-
-        {/* Links to live site and GitHub repo */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-          <a
-            href="https://elrenonailspa.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 font-medium hover:underline"
-          >
-            elrenonailspa.com
-          </a>
-        </div>
-
-        <Link
-          href="/getsite"
-          className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded shadow hover:bg-blue-700 transition"
-        >
-          Get a Site
-        </Link>
-      </section>
-
     </main>
   );
 }
