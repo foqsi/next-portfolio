@@ -42,3 +42,29 @@ body {
   overflow-y: auto;
   /* instead of auto/scroll/hidden */
 }
+
+
+.card::before,
+.card::after {
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 500ms;
+  z-index: 1;
+}
+
+.card:hover::before {
+  opacity: 1;
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.06),
+      transparent 40%);
+}
+
+.card:hover::after {
+  opacity: 1;
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+      rgb(255, 255, 255),
+      transparent 40%);
+}

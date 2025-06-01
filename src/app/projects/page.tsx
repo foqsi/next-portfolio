@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       description: 'CRUD app allowing owner to manage services, gallery, and appointments.',
       about: '/projects/salon',
       live: 'https://elrenonailspa.com',
-      github: 'https://github.com/foqsi/salon-site',
+      github: 'https://github.com/foqsi/react-salon',
       icons: techIcons,
     },
     {
