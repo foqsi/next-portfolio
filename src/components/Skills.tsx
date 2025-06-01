@@ -3,7 +3,6 @@
 import FadeSequence from '@/components/animations/FadeSequence'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
 import { SiNextdotjs, SiTailwindcss, SiTypescript, SiPython, SiSupabase, SiSailsdotjs, SiFramer } from 'react-icons/si'
-import GlowCard from './GlowCard'
 
 export default function Skills() {
   const skills = [
