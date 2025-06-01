@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import GlowCard from '@/components/GlowCard'
 
 export default function SalonSiteFeatures() {
   const [modalImage, setModalImage] = useState<string | null>(null)
@@ -18,13 +19,13 @@ export default function SalonSiteFeatures() {
   ]
 
   return (
-    <main className="bg-gray-50 dark:bg-backgroundalt max-w-5xl mx-auto px-4 pt-12 pb-16 mb-6 rounded-xl">
+    <main className="bg-gray-50 dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-400 max-w-5xl mx-auto px-4 pt-12 pb-16 mb-6 rounded-xl">
       <header className="text-center mb-12">
-        <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">El Reno Nail Spa</h1>
+        <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-gradient bg-gradient-to-r dark:from-blue-500 dark:to-teal-400 from-gray-600 to-gray-400 bg-clip-text text-transparent">El Reno Nail Spa</h1>
       </header>
 
       {/* Core Features */}
-      <section className="mb-6 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+      <GlowCard className="mb-6 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Core Features</h2>
         <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
           <li>Easy online booking system with automated confirmations using EmailJS</li>
@@ -36,10 +37,10 @@ export default function SalonSiteFeatures() {
           <li>Automatically apply logo or watermark when uploading to gallery</li>
           <li>CRUD admin panels for managing content</li>
         </ul>
-      </section>
+      </GlowCard>
 
       {/* Screenshots */}
-      <section className="mb-6 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+      <GlowCard className="mb-6 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-center">Gallery & Admin Features</h2>
         <div className="grid gap-6 sm:grid-cols-2">
           {images.slice(0, 2).map(({ src, alt }) => (
@@ -90,7 +91,7 @@ export default function SalonSiteFeatures() {
             </div>
           </div>
         </div>
-      </section>
+      </GlowCard>
 
       {/* Modal */}
       {modalImage && (

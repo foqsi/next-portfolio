@@ -78,8 +78,8 @@ export default function ProjectsPage() {
   return (
     <section className="bg-gray-50 dark:bg-background min-h-screen flex flex-col items-center px-4 pt-12 pb-24 text-center">
       <FadeInDown>
-        <h2 className="text-4xl font-bold mb-10 flex items-center gap-2 text-gradient bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
-          <FaFolderOpen className="text-accent text-3xl" />
+        <h2 className="text-4xl font-bold mb-10 flex items-center gap-2 text-gradient bg-gradient-to-r dark:from-blue-500 dark:to-teal-400 from-gray-500 to-gray-400 bg-clip-text text-transparent">
+          <FaFolderOpen className="text-gray-500 dark:text-accent text-3xl" />
           Projects
         </h2>
       </FadeInDown>

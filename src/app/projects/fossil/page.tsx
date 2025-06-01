@@ -1,17 +1,19 @@
 // /app/discord-bot-features/page.tsx
 
+import GlowCard from "@/components/GlowCard";
+
 export default function DiscordBotFeatures() {
   return (
-    <main className="bg-gray-50 dark:bg-backgroundalt max-w-5xl mx-auto px-4 pt-12 pb-16 mb-6 rounded-xl">
+    <main className="bg-gray-50 dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-400 max-w-5xl mx-auto px-4 pt-12 pb-16 mb-6 rounded-xl">
       <header className="text-center mb-12">
-        <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">The Isle Evrima Discord Bot</h1>
+        <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-gradient bg-gradient-to-r dark:from-blue-500 dark:to-teal-400 from-gray-500 to-gray-400 bg-clip-text text-transparent">The Isle Evrima Discord Bot</h1>
         <p className="text-gray-700 dark:text-gray-300 max-w-xl mx-auto">
           A Discord bot that monitored The Isle Evrima game server logs to create an interactive experience for players.
         </p>
       </header>
 
       {/* YouTube Video */}
-      <section className="mb-6 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+      <section className="mb-6 p-6 bg-gray-200 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-center">Demo Video</h2>
         <div className="w-full max-w-4xl mx-auto rounded-lg shadow overflow-hidden border border-gray-200 dark:border-gray-700">
           <iframe
@@ -26,7 +28,7 @@ export default function DiscordBotFeatures() {
       </section>
 
       {/* Core Features */}
-      <section className="mb-6 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+      <GlowCard className="mb-6 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Core Features</h2>
         <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
           <li>Monitors live logs for real-time updates</li>
@@ -38,10 +40,10 @@ export default function DiscordBotFeatures() {
           <li>Automatically control dinosaur population by locking those with high player count</li>
           <li>Patreon can unlock dinosaurs</li>
         </ul>
-      </section>
+      </GlowCard>
 
       {/* Commands Explanation */}
-      <section className="mb-6 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+      <GlowCard className="mb-6 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Commands</h2>
         <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
           <li><strong>/restarts</strong> — Shows when the server restarted.</li>
@@ -53,10 +55,10 @@ export default function DiscordBotFeatures() {
           <li><strong>/pair</strong> — Generates a pairing key (FD-PAIR-xxxxxx) for linking accounts.</li>
           <li><strong>/check_pair</strong> — Checks the current pairing status.</li>
         </ul>
-      </section>
+      </GlowCard>
 
       {/* How It Works */}
-      <section className="mb-6 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+      <GlowCard className="mb-6 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4">How It Works</h2>
         <p className="mb-4 text-gray-700 dark:text-gray-300">
           The bot listens to game server logs in real time to identify events and messages. It bridges the gap between the in-game experience and the Discord community.
@@ -64,7 +66,7 @@ export default function DiscordBotFeatures() {
         <p className="text-gray-700 dark:text-gray-300">
           Admins have powerful commands for managing the server, while players can pair their accounts for a more interactive experience.
         </p>
-      </section>
+      </GlowCard>
     </main>
   );
 }

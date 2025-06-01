@@ -50,7 +50,7 @@ export default function ProjectCard({
       ref={cardRef}
       className="card relative rounded-lg w-full max-w-md overflow-hidden bg-gray-200 dark:bg-[rgba(255,255,255,0.05)] border-2 border-white dark:border-gray-600 shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out hover:shadow-2xl hover:bg-gray-300 dark:hover:bg-gray-600"
     >
-      <div className="card-content w-[98%] m-1 bg-white-50 dark:bg-gray-700 rounded-lg p-6 relative z-10 flex flex-col flex-grow text-black dark:text-white">
+      <div className="m-1 bg-white-50 dark:bg-gray-700 rounded-lg p-6 relative z-10 flex flex-col flex-grow text-black dark:text-white">
         <div className="flex flex-col flex-grow justify-between">
           {/* Title and Description */}
           <div>

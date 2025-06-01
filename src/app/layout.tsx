@@ -32,7 +32,7 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="font-raleway bg-background text-foreground transition-colors overflow-x-hidden overflow-y-auto">
+      <body className="font-raleway bg-gray-50 dark:bg-background text-foreground transition-colors overflow-x-hidden overflow-y-auto">
         <HeroPinProvider>
           <ThemeProvider>
             <LayoutContent>{children}</LayoutContent>
