@@ -68,7 +68,7 @@ export default function ProjectCard({
           </div>
 
           {/* Links */}
-          <div className="flex gap-4 text-xs font-medium text-blue-400">
+          <div className="flex gap-3 text-sm font-medium text-blue-500">
             {about && (
               <a href={about} target="_self" rel="noopener noreferrer" className="hover:underline">
                 Read More
