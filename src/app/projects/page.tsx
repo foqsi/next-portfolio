@@ -4,7 +4,7 @@ import { FadeInDown } from '@/components/animations'
 import FadeSequence from '@/components/animations/FadeSequence'
 import ProjectCard from '@/components/ProjectCard'
 import { FaFolderOpen } from 'react-icons/fa'
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql, SiPython, SiReact } from 'react-icons/si'
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql, SiPython } from 'react-icons/si'
 
 export default function ProjectsPage() {
   const techIcons = [
@@ -21,6 +21,13 @@ export default function ProjectsPage() {
       about: '/projects/salon',
       live: 'https://elrenonailspa.com',
       github: 'https://github.com/foqsi/react-salon',
+      icons: techIcons,
+    },
+    {
+      title: 'Simpler Salon',
+      description: 'An ad site for people to purchase a CRUD app and has a separate demo on sub domain to experience the admin panel.',
+      live: 'https://simplersalon.com',
+      github: 'https://github.com/foqsi/next-simplersalon',
       icons: techIcons,
     },
     {
@@ -61,17 +68,7 @@ export default function ProjectsPage() {
       description: 'This portfolio site built with Next.js, Tailwind CSS, and TypeScript.',
       github: 'https://github.com/foqsi/next-portfolio',
       icons: techIcons,
-    },
-    {
-      title: 'Portfolio v1',
-      description: 'My first React project.',
-      live: 'https://v1.realedavis.com',
-      github: 'https://github.com/foqsi/react-portfolio',
-      icons: [
-        { icon: <SiReact size={20} />, name: 'React' },
-        { icon: <SiTailwindcss size={20} />, name: 'Tailwind CSS' },
-      ],
-    },
+    }
   ]
 
 
@@ -84,7 +81,7 @@ export default function ProjectsPage() {
         </h2>
       </FadeInDown>
 
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 text-left">
         <FadeSequence
           steps={projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
